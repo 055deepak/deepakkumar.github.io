@@ -6,30 +6,159 @@
   <title>Deepak Kumar - Data Analyst Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #0a192f, #112240, #233554); color: #fff; }
-    header { text-align: center; padding: 40px 20px; background: transparent; animation: fadeInDown 1s ease-out; }
-    header img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #64ffda; margin-bottom: 10px; animation: fadeIn 2s ease-in-out; }
-    header h1 { margin: 10px 0 5px; font-size: 2rem; }
-    header p { font-size: 1rem; color: #64ffda; }
-    nav { display: flex; justify-content: center; gap: 20px; background-color: rgba(17, 34, 64, 0.9); padding: 12px; flex-wrap: wrap; }
-    nav a { color: #ccd6f6; text-decoration: none; font-weight: 600; padding: 6px 10px; border-radius: 4px; transition: 0.3s; }
-    nav a:hover { background-color: #64ffda; color: #0a192f; }
-    section { max-width: 1000px; margin: 40px auto; padding: 20px; background: rgba(255, 255, 255, 0.95); color: #333; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); opacity: 0; transform: translateY(20px); animation: fadeInUp 1s forwards; }
-    section:nth-child(odd) { animation-delay: 0.3s; }
-    section:nth-child(even) { animation-delay: 0.6s; }
-    h2 { border-bottom: 2px solid #64ffda; padding-bottom: 6px; color: #0a192f; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-    .card { background: #e1e6f0; padding: 15px; border-radius: 8px; transition: 0.3s; opacity: 0; transform: scale(0.95); animation: fadeInCard 0.8s forwards; }
-    .card:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); }
-    .card h3 { margin-top: 0; color: #0a192f; }
-    footer { text-align: center; padding: 20px; background-color: #112240; color: white; }
-    a.button { display: inline-block; padding: 8px 15px; background-color: #64ffda; color: #0a192f; text-decoration: none; border-radius: 4px; margin-top: 10px; transition: 0.3s; }
-    a.button:hover { background-color: #52e0c4; }
-    @keyframes fadeIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
-    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInCard { to { opacity: 1; transform: scale(1); } }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0a192f, #112240, #233554);
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: transparent;
+      animation: fadeInDown 1s ease-out;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #64ffda;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1rem;
+      color: #64ffda;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgba(17, 34, 64, 0.9);
+      padding: 12px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #ccd6f6;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #64ffda;
+      color: #0a192f;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    section:nth-child(odd) {
+      animation-delay: 0.3s;
+    }
+    section:nth-child(even) {
+      animation-delay: 0.6s;
+    }
+    h2 {
+      border-bottom: 2px solid #64ffda;
+      padding-bottom: 6px;
+      color: #0a192f;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #e1e6f0;
+      padding: 15px;
+      border-radius: 8px;
+      transition: 0.3s;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeInCard 0.8s forwards;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #0a192f;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #112240;
+      color: white;
+    }
+    a.button {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #64ffda;
+      color: #0a192f;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    a.button:hover {
+      background-color: #52e0c4;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInCard {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
 <body>
@@ -54,9 +183,6 @@
       data analytics, reporting, and dashboards using Power BI, SQL, Excel, and
       Python. Passionate about transforming data into actionable insights.
     </p>
-    <p>
-      Additionally, I hold **10 years of data analytics expertise**, specializing in Excel, SQL, Power BI, and Python. I'm deeply engaged in **time series analysis, advanced visualization, and dashboard design**. My mission is to empower businesses by making data-driven decisions seamless and impactful.
-    </p>
   </section>
 
   <section id="skills">
@@ -64,36 +190,130 @@
     <div class="cards">
       <div class="card">
         <h3>Data Analysis</h3>
-        <p>Python, Pandas, SQL, Excel, NumPy, Time Series, EDA</p>
+        <p>Python, Pandas, SQL, Excel</p>
       </div>
       <div class="card">
         <h3>Visualization</h3>
-        <p>Power BI, Seaborn, Matplotlib, Dash</p>
+        <p>Power BI, Seaborn, Matplotlib</p>
       </div>
       <div class="card">
         <h3>Automation</h3>
-        <p>Excel Macros, Jupyter Notebooks, Streamlit, API Handling</p>
-      </div>
-      <div class="card">
-        <h3>Reporting & BI</h3>
-        <p>Power BI Service, Power BI Desktop, Data Modeling, DAX</p>
+        <p>Excel Macros, Jupyter Notebooks</p>
       </div>
     </div>
   </section>
 
   <section id="experience">
-    <!-- Your unchanged experience content -->
-    <!-- Keep as is -->
+    <h2>Experience</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Assistant Manager</h3>
+        <p>
+          <strong>Next Level Business Services, Inc.</strong><br />
+          Noida Area, India<br />
+          Dec 2018 – Present (6 years 6 months)
+        </p>
+        <ul>
+          <li>Leading data analytics and reporting projects using Power BI, SQL, and Python.</li>
+          <li>Developing dynamic dashboards and automating reporting processes.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Sr. Data Analyst</h3>
+        <p>
+          <strong>Pyramid Consulting, Inc.</strong><br />
+          Noida Area, India<br />
+          Aug 2015 – Nov 2018 (3 years 4 months)
+        </p>
+        <ul>
+          <li>Designed and implemented data models for reporting and analysis.</li>
+          <li>Worked on large datasets for business insights and decision-making.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data Analyst</h3>
+        <p>
+          <strong>Artech Information Systems</strong><br />
+          Noida Area, India<br />
+          Jan 2015 – Jul 2015 (7 months)
+        </p>
+        <ul>
+          <li>Conducted data cleaning, transformation, and visualization.</li>
+          <li>Supported analytics teams with operational reports.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data Analyst</h3>
+        <p>
+          <strong>Reliance Dairy And Pharma Fittings</strong><br />
+          Noida Area, India<br />
+          Mar 2014 – Dec 2014 (10 months)
+        </p>
+        <ul>
+          <li>Handled data analysis for operational and supply chain metrics.</li>
+          <li>Created Excel-based dashboards for key stakeholders.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="projects">
-    <!-- Your unchanged project content -->
-    <!-- Keep as is -->
+    <h2>Showcase Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Power BI Dashboards</h3>
+        <p>Interview Vs Hires, Sense Messaging, Productivity KPIs</p>
+        <a
+          href="https://github.com/055deepak/all-my-projects/tree/main/Power%20BI%20Dashboards"
+          target="_blank"
+          class="button"
+          >View on GitHub</a
+        >
+      </div>
+      <div class="card">
+        <h3>Python Data Analysis</h3>
+        <p>Churn Analysis, Timesheet Data, Retail EDA</p>
+        <a
+          href="https://github.com/055deepak/all-my-projects/tree/main/Python%20Data%20Analysis"
+          target="_blank"
+          class="button"
+          >View on GitHub</a
+        >
+      </div>
+      <div class="card">
+        <h3>Excel Dashboard</h3>
+        <p>Monthly Recruiter Productivity Tracker</p>
+        <a
+          href="https://github.com/055deepak/all-my-projects/tree/main/Excel%20Dashboard"
+          target="_blank"
+          class="button"
+          >View on GitHub</a
+        >
+      </div>
+    </div>
+    <p style="margin-top: 15px;">
+      <a href="https://github.com/055deepak/all-my-projects" target="_blank" class="button"
+        >Full Project Repository</a
+      >
+    </p>
   </section>
 
   <section id="contact">
-    <!-- Your unchanged contact content -->
-    <!-- Keep as is -->
+    <h2>Contact</h2>
+    <p>Email: dksharma055@gmail.com</p>
+    <p>Phone: 8750595733</p>
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/deepak-sharma-454979103/" target="_blank"
+        >View Profile</a
+      >
+    </p>
+    <p>
+      GitHub Pages:
+      <a href="https://055deepak.github.io/deepakkumar.github.io/" target="_blank"
+        >My Portfolio Site</a
+      >
+    </p>
   </section>
 
   <footer>© 2025 Deepak Kumar. All rights reserved.</footer>
