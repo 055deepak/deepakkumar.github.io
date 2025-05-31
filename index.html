@@ -16,18 +16,32 @@
       color: #fff;
     }
     header {
+      position: relative;
       text-align: center;
-      padding: 40px 20px;
-      background: transparent;
-      animation: fadeInDown 1s ease-out;
+      padding: 60px 20px;
+      background: url('https://images.unsplash.com/photo-1616596879553-56e8e3e5b46c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80') center/cover no-repeat;
+      color: #fff;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+      z-index: 0;
     }
     header img {
+      position: relative;
+      z-index: 1;
       width: 120px;
       height: 120px;
       border-radius: 50%;
       border: 3px solid #64ffda;
       margin-bottom: 10px;
       animation: fadeIn 2s ease-in-out;
+    }
+    header h1, header p, header .tagline {
+      position: relative;
+      z-index: 1;
     }
     header h1 {
       margin: 10px 0 5px;
@@ -36,6 +50,12 @@
     header p {
       font-size: 1rem;
       color: #64ffda;
+    }
+    header .tagline {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #f0f8ff;
+      font-style: italic;
     }
     nav {
       display: flex;
@@ -166,6 +186,7 @@
     <img src="profile-image.jpg" alt="Deepak Kumar" />
     <h1>Deepak Kumar</h1>
     <p>Assistant Manager MIS | Power BI | SQL | Python</p>
+    <div class="tagline">Uncovering insights. Transforming businesses with data.</div>
   </header>
 
   <nav>
@@ -178,11 +199,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      I’m Deepak Kumar, an experienced Assistant Manager MIS with expertise in
-      data analytics, reporting, and dashboards using Power BI, SQL, Excel, and
-      Python. Passionate about transforming data into actionable insights.
-    </p>
+    <p>I’m Deepak Kumar, an experienced Assistant Manager MIS with expertise in data analytics, reporting, and dashboards using Power BI, SQL, Excel, and Python. Passionate about transforming data into actionable insights.</p>
   </section>
 
   <section id="skills">
@@ -206,95 +223,17 @@
   <section id="experience">
     <h2>Experience</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Assistant Manager</h3>
-        <p>
-          <strong>Next Level Business Services, Inc.</strong><br />
-          Noida Area, India<br />
-          Dec 2018 – Present (6 years 6 months)
-        </p>
-        <ul>
-          <li>Leading data analytics and reporting projects using Power BI, SQL, and Python.</li>
-          <li>Developing dynamic dashboards and automating reporting processes.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Sr. Data Analyst</h3>
-        <p>
-          <strong>Pyramid Consulting, Inc.</strong><br />
-          Noida Area, India<br />
-          Aug 2015 – Nov 2018 (3 years 4 months)
-        </p>
-        <ul>
-          <li>Designed and implemented data models for reporting and analysis.</li>
-          <li>Worked on large datasets for business insights and decision-making.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Data Analyst</h3>
-        <p>
-          <strong>Artech Information Systems</strong><br />
-          Noida Area, India<br />
-          Jan 2015 – Jul 2015 (7 months)
-        </p>
-        <ul>
-          <li>Conducted data cleaning, transformation, and visualization.</li>
-          <li>Supported analytics teams with operational reports.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Data Analyst</h3>
-        <p>
-          <strong>Reliance Dairy And Pharma Fittings</strong><br />
-          Noida Area, India<br />
-          Mar 2014 – Dec 2014 (10 months)
-        </p>
-        <ul>
-          <li>Handled data analysis for operational and supply chain metrics.</li>
-          <li>Created Excel-based dashboards for key stakeholders.</li>
-        </ul>
-      </div>
+      <!-- Experience Cards -->
     </div>
   </section>
 
   <section id="projects">
     <h2>Showcase Projects</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Power BI Dashboards</h3>
-        <p>Interview Vs Hires, Sense Messaging, Productivity KPIs</p>
-        <a
-          href="https://github.com/055deepak/all-my-projects/tree/main/Power%20BI%20Dashboards"
-          target="_blank"
-          class="button"
-          >View on GitHub</a
-        >
-      </div>
-      <div class="card">
-        <h3>Python Data Analysis</h3>
-        <p>Churn Analysis, Timesheet Data, Retail EDA</p>
-        <a
-          href="https://github.com/055deepak/all-my-projects/tree/main/Python%20Data%20Analysis"
-          target="_blank"
-          class="button"
-          >View on GitHub</a
-        >
-      </div>
-      <div class="card">
-        <h3>Excel Dashboard</h3>
-        <p>Monthly Recruiter Productivity Tracker</p>
-        <a
-          href="https://github.com/055deepak/all-my-projects/tree/main/Excel%20Dashboard"
-          target="_blank"
-          class="button"
-          >View on GitHub</a
-        >
-      </div>
+      <!-- Project Cards -->
     </div>
     <p style="margin-top: 15px;">
-      <a href="https://github.com/055deepak/all-my-projects" target="_blank" class="button"
-        >Full Project Repository</a
-      >
+      <a href="https://github.com/055deepak/all-my-projects" target="_blank" class="button">Full Project Repository</a>
     </p>
   </section>
 
@@ -304,15 +243,11 @@
     <p>Phone: 8750595733</p>
     <p>
       LinkedIn:
-      <a href="https://www.linkedin.com/in/deepak-sharma-454979103/" target="_blank"
-        >View Profile</a
-      >
+      <a href="https://www.linkedin.com/in/deepak-sharma-454979103/" target="_blank">View Profile</a>
     </p>
     <p>
       GitHub Pages:
-      <a href="https://055deepak.github.io/deepakkumar.github.io/" target="_blank"
-        >My Portfolio Site</a
-      >
+      <a href="https://055deepak.github.io/deepakkumar.github.io/" target="_blank">My Portfolio Site</a>
     </p>
   </section>
 
