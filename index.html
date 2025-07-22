@@ -1,123 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deepak Kumar - Data Analyst</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deepak Kumar - Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0a192f, #112240, #233554);
+      color: #fff;
     }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-      background-color: #fff;
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: transparent;
+      animation: fadeInDown 1s ease-out;
     }
-    h1, h2 {
-      color: #005792;
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #64ffda;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
     }
-    ul {
-      margin: 0;
-      padding-left: 1.5rem;
+    header h1 { margin: 10px 0 5px; font-size: 2rem; }
+    header p { font-size: 1rem; color: #64ffda; }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgba(17, 34, 64, 0.9);
+      padding: 12px;
+      flex-wrap: wrap;
     }
-    .section {
-      margin-bottom: 1.5rem;
-    }
-    .contact a {
-      color: #005792;
+    nav a {
+      color: #ccd6f6;
       text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: 0.3s;
     }
-    .contact a:hover {
-      text-decoration: underline;
+    nav a:hover { background-color: #64ffda; color: #0a192f; }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.95);
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
     }
-    .small-text {
-      font-size: 0.9em;
-      color: #666;
+    section:nth-child(odd) { animation-delay: 0.3s; }
+    section:nth-child(even) { animation-delay: 0.6s; }
+    h2 {
+      border-bottom: 2px solid #64ffda;
+      padding-bottom: 6px;
+      color: #0a192f;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #e1e6f0;
+      padding: 15px;
+      border-radius: 8px;
+      transition: 0.3s;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeInCard 0.8s forwards;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .card h3 { margin-top: 0; color: #0a192f; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #112240;
+      color: white;
+    }
+    a.button {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #64ffda;
+      color: #0a192f;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    a.button:hover { background-color: #52e0c4; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInCard {
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Deepak Kumar</h1>
-      <p class="contact">
-        📍 Noida, India | 📞 +91 8750595733 | ✉️ <a href="mailto:dksharma055@gmail.com">dksharma055@gmail.com</a><br>
-        🔗 <a href="https://www.linkedin.com/in/deepak-kumar-454979103/" target="_blank">LinkedIn</a> |
-        🌐 <a href="https://deepakkumar.github.io" target="_blank">Portfolio</a>
-      </p>
-    </header>
 
-    <section class="section">
-      <h2>Professional Summary</h2>
-      <p>Experienced Data Analyst with 9+ years in business intelligence, data analytics, and automation. Expert in Power BI, SQL, Excel, and Python (Pandas, Seaborn, Matplotlib) for dashboard development, data modeling, and ETL. Proven success in reducing manual effort by 25%, streamlining processes, and delivering insights across recruitment, procurement, and operations.</p>
-    </section>
+<header>
+  <img src="profile-image.jpg" alt="Deepak Kumar">
+  <h1>Deepak Kumar</h1>
+  <p>Assistant Manager MIS | Power BI | SQL | Python</p>
+</header>
 
-    <section class="section">
-      <h2>Core Competencies</h2>
-      <ul>
-        <li><strong>BI & Reporting:</strong> Power BI (Desktop & Service), Power Query, SQL, Excel, Azure</li>
-        <li><strong>Dashboards:</strong> Power BI, Excel (Recruiter/Manager Dashboards), Google Sheets</li>
-        <li><strong>ETL & Automation:</strong> Python (Pandas, Seaborn), Jupyter, Streamlit, VBA, Django</li>
-        <li><strong>Data Management:</strong> Large dataset handling, data cleaning, Job Diva extraction</li>
-        <li><strong>Business Insight:</strong> SDLC, MIS, process optimization, recruitment/procurement analytics</li>
-      </ul>
-    </section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <section class="section">
-      <h2>Experience</h2>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m Deepak Kumar, an experienced Assistant Manager MIS with expertise in data analytics, reporting, and dashboards using Power BI, SQL, Excel, and Python. Passionate about transforming data into actionable insights.</p>
+</section>
 
-      <strong>NLB Services Pvt. Ltd – Data Analyst / Power BI</strong><br/>
-      <span class="small-text">Dec 2018 – Present</span>
-      <ul>
-        <li>Reduced manual reporting effort by 25% through automation and dashboard creation.</li>
-        <li>Developed enterprise Power BI dashboards with Row-Level Security and star schema models.</li>
-        <li>Built Python-based ETL pipelines and visualizations for recruitment & messaging data.</li>
-        <li>Key Projects:
-          <ul>
-            <li><strong>Consultants Timesheet Management:</strong> Power BI dashboard using DirectQuery for real-time tracking of consultants’ hours, helping identify defaulters and improving compliance.</li>
-            <li><strong>Messaging Service Monitor:</strong> Analyzed platform usage, reducing portal subscription costs by 10% through insight-driven actions.</li>
-            <li><strong>Vendor Management:</strong> Visualized cleaned Job Diva data using Python (Seaborn, Matplotlib).</li>
-          </ul>
-        </li>
-      </ul>
-
-      <strong>Pyramid IT Consulting Pvt. Ltd – Data Analyst</strong><br/>
-      <span class="small-text">Aug 2015 – Nov 2018</span>
-      <ul>
-        <li>Reduced recruiter reporting time by 30% with automated Excel dashboards and VBA macros.</li>
-        <li>Created Power BI dashboards from Excel files using Power Query and slicers for HR analytics.</li>
-      </ul>
-
-      <strong>Reliance Dairy Foods Ltd – MIS Executive (Contractual)</strong><br/>
-      <span class="small-text">Mar 2014 – Dec 2014</span>
-      <ul>
-        <li>Generated procurement reports using Excel and SAP data, automated processes with VBA.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Education</h2>
-      <ul>
-        <li>MCA – UPTU (2014)</li>
-        <li>BCA – CCSU, Meerut (2011)</li>
-        <li>Intermediate & High School – UP Board (2008 & 2006)</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Strengths</h2>
-      <ul>
-        <li>Strong problem-solving and analytical thinking</li>
-        <li>Quick learner with adaptability</li>
-        <li>Collaborative team player with leadership potential</li>
-      </ul>
-    </section>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="cards">
+    <div class="card"><h3>Data Analysis</h3><p>Python, Pandas, SQL, Excel</p></div>
+    <div class="card"><h3>Visualization</h3><p>Power BI, Seaborn, Matplotlib</p></div>
+    <div class="card"><h3>Automation</h3><p>Excel Macros, Jupyter Notebooks</p></div>
   </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Assistant Manager</h3>
+      <p><strong>Next Level Business Services, Inc.</strong><br>Noida Area, India<br>Dec 2018 – Present (6 years 6 months)</p>
+      <ul>
+        <li>Leading data analytics and reporting projects using Power BI, SQL, and Python.</li>
+        <li>Developing dynamic dashboards and automating reporting processes.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Sr. Data Analyst</h3>
+      <p><strong>Pyramid Consulting, Inc.</strong><br>Noida Area, India<br>Aug 2015 – Nov 2018 (3 years 4 months)</p>
+      <ul>
+        <li>Designed and implemented data models for reporting and analysis.</li>
+        <li>Worked on large datasets for business insights and decision-making.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Data Analyst</h3>
+      <p><strong>Artech Information Systems</strong><br>Noida Area, India<br>Jan 2015 – Jul 2015 (7 months)</p>
+      <ul>
+        <li>Conducted data cleaning, transformation, and visualization.</li>
+        <li>Supported analytics teams with operational reports.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Data Analyst</h3>
+      <p><strong>Reliance Dairy And Pharma Fittings</strong><br>Noida Area, India<br>Mar 2014 – Dec 2014 (10 months)</p>
+      <ul>
+        <li>Handled data analysis for operational and supply chain metrics.</li>
+        <li>Created Excel-based dashboards for key stakeholders.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Showcase Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Power BI Dashboards</h3>
+      <p>Interview Vs Hires, Sense Messaging, Productivity KPIs</p>
+      <a href="https://github.com/055deepak/all-my-projects/tree/main/Power%20BI%20Dashboards" target="_blank" class="button">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Python Data Analysis</h3>
+      <p>Churn Analysis, Timesheet Data, Retail EDA</p>
+      <a href="https://github.com/055deepak/all-my-projects/tree/main/Python%20Data%20Analysis" target="_blank" class="button">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Excel Dashboard</h3>
+      <p>Monthly Recruiter Productivity Tracker</p>
+      <a href="https://github.com/055deepak/all-my-projects/tree/main/Excel%20Dashboard" target="_blank" class="button">View on GitHub</a>
+    </div>
+  </div>
+  <p style="margin-top:15px;"><a href="https://github.com/055deepak/all-my-projects" target="_blank" class="button">Full Project Repository</a></p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: dksharma055@gmail.com</p>
+  <p>Phone: 8750595733</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/deepak-sharma-454979103/" target="_blank">View Profile</a></p>
+</section>
+
+<footer>© 2025 Deepak Kumar. All rights reserved.</footer>
+
 </body>
 </html>
